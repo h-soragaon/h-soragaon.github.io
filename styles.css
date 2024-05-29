@@ -1,107 +1,267 @@
-/* .pill {
-    font-family: 'EB Garamond', serif;
-    font-size: 18px;
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: #eee;
-    border-radius: 12px;
-    margin: 5px;
-    text-align: center;
-}
-
-img {
-    border-radius: 50%;
-    width: 200px;
-    height: 200px;
-    border: solid rgb(20, 111, 230);
-    display: block;
-    margin: 80px auto 0;
-}
-
-h1 {
-    font-family: 'EB Garamond', serif;
-    font-size: 48px;
-    text-align: center;
-    margin-top: 30px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-p {
-    font-family: 'EB Garamond', serif;
-    font-size: 22px;
-    font-style: italic;
-    text-align: center;
-    margin-top: 20px;
-    margin-left: auto;
-    margin-right: auto;
-} */
-
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-  }
-  
-  header {
-    background-color: #f0f0f0;
-    padding: 20px;
-    text-align: center;
-  }
-  
-  h1, h2 {
-    margin: 0;
-    padding: 0;
-  }
-  
-  h1 {
-    font-size: 2em;
-  }
-  
-  h2 {
-    font-size: 1.5em;
-  }
-  
-  nav {
-    background-color: #e0e0e0;
-    padding: 10px;
-  }
-  
-  nav ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    text-align: center;
-  }
-  
-  nav li {
-    display: inline-block;
-    margin: 0 10px;
-  }
-  
-  nav a {
-    color: black;
+    background-color: black;
+    font-family: 'PT Sans', sans-serif;
+}
+
+.navbar {
+    height: 90px;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "PT Sans Narrow", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 28px;
+}
+
+.logo {
+    margin-left: 122px;
+    margin-right: auto;
+    font-size: 40px;
     text-decoration: none;
-    font-weight: bold;
-  }
-  
-  main {
-    padding: 20px;
-  }
-  
-  section {
-    margin-bottom: 20px;
-  }
-  
-  article {
-    border: 1px solid #ddd;
-    padding: 10px;
-    margin-bottom: 10px;
-  }
-  
-  footer {
-    background-color: #f0f0f0;
+    background: linear-gradient(90deg, #E30B0B, #B016A0);
+    background-clip: text; /* Clip the background to the text */
+    -webkit-background-clip: text; /* For Safari */
+    color: transparent; /* Hide the original text color */
+}
+
+nav {
+    display: flex;
+    gap: 90px;
+    margin-right: 122px;
+}
+
+nav a {
     text-align: center;
-    padding: 10px;
-  }
+    text-decoration: none;
+    color: #808080;
+}
+
+nav a:hover {
+    color: white;
+}
+
+@media screen and (max-width: 768px) {
+    .navbar-menu {
+        display: none; /* Hide the navbar on mobile screens */
+    }
+}
+
+.hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-container {
+    height: 650px;
+    width: 100%;
+    margin: 45px 122px;
+    border-bottom: 1px solid white;
+    /* background-color: white; */
+}
+
+.hero-title {
+    margin-left: 102px;
+    font-family: "Montserrat", sans-serif;
+    color: white;
+}
+
+.name {
+    font-size: 62px;
+    font-weight: 200;
+}
+
+.bold-text {
+    font-weight: 600;
+}
+
+.sub-name {
+    margin-top: 20px;
+    font-size: 24px;
+}
+
+.hero-content {
+    display: flex;
+    flex-direction: row;
+    margin-top: 30px;
+}
+
+.img-container {
+    display: inline-block;
+    margin-left: 102px;
+    border: 1px solid; 
+    border-image: linear-gradient(180deg, #E30B0B, #B016A0) 30; 
+}
+
+.img-container img {
+    display: block; 
+    height: 352px; 
+}
+
+.hero-para {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-left: 30px;
+    margin-right: 102px;
+    font-size: 24px;
+    color: #808080;
+}
+
+.container {
+    margin-top: 60px;
+    margin-left: 122px;
+    margin-right: 122px;
+    /* display: grid;
+    grid-template-columns: repeat(10, 1fr); */
+}
+/* @media (min-width: 992px) {
+    .container {
+        width: 970px;
+     }
+} */
+.row {
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+}
+.ico {
+    grid-column: span 1;
+    vertical-align: top;
+    border-left: 1px solid white;
+}
+.ico img {
+    border-radius: 2px;
+    width: 65px;
+    margin-left: 20px;
+}
+.desc {
+    grid-column: span 6;
+    vertical-align: top;
+    font-size: 24px;
+    margin-left: 0px;
+    padding-bottom: 40px;
+    color: #808080;
+}
+.entry-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 5px;
+    background-color: white;
+    border-color: white;
+    transform: translateX(-55%) translateY(95%);
+}
+.timespan {
+    grid-column: span 2;
+    font-size: 24px;
+    text-align: right;
+    margin-right: 20px;
+    color: #808080;
+}
+
+.contact {
+    height: 700px;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.contact-name {
+    width: 954px;
+    text-align: left;
+    font-size: 40px;
+    font-weight: 200;
+    font-family: "Montserrat", sans-serif;
+    color: white;
+}
+.contact-box {
+    width: 954px;
+    height: 426px;
+    margin-top: 50px;
+    border: 1px solid white;
+    display: flex;
+    flex-direction: row;
+}
+
+.form-col {
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    margin-top: 50px;
+    margin-left: 102px;
+}
+form {
+    display: flex;
+    flex-direction: column;
+} 
+form label {
+    font-size: 24px;
+    color: #808080;
+} 
+form input, form textarea {
+    width: 365px;
+    height: 40px;
+    margin-top: 5px;
+    margin-bottom: 25px;
+    padding-left: 8px;
+    background-color: black;
+    border: 1px solid #808080;
+    font-size: 20px;
+    font-family: 'PT Sans', sans-serif;
+    color: white;
+}
+form textarea {
+    height: 60px;
+}
   
+.email-col {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    margin-top: 50px;
+    margin-left: 102px;
+}
+.email-col h3 {
+    margin-top: 0px;
+    margin-bottom: 5px;
+    font-size: 28px;
+    font-weight: 400;
+    color: #808080;
+}
+.email-col p {
+    margin-top: 0px;
+    margin-bottom: 40px;
+    font-size: 24px;
+    font-weight: 400;
+    color: white;
+}
+button {
+    transform: translateY(42px);
+    width: 165px;
+    height: 44px;
+    background-color: #808080;
+    color: #000;
+    border: none;
+    cursor: pointer;
+    font-size: 24px;
+    font-family: 'PT Sans', sans-serif;
+} 
+button:hover {
+    background-color: white;
+}
+
+.custom-footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90px;
+    margin-top: 10px;
+    background-color: white;
+}
+.custom-footer p {
+    text-align: center;
+    font-size: 24px;
+    color: black;
+}
